@@ -1,0 +1,15 @@
+<div class="container mt-3">
+    <!-- Two Way Data Binding by ngModel directive -->
+    <div class="form-group">
+        <label for="unameID" class="text-primary"><b>Enter Your User Name</b></label>
+        <input type="text" class="form-control" name="uname" id="unameID" [(ngModel)]="userName" aria-describedby="helpId" placeholder="User Name">
+        <small id="helpId" class="form-text text-muted">Change the User Name to see the effect</small>
+    </div>
+
+    <!-- Use of String Iterpolation -->
+    <p class="container text-warning"><b> User Name is: <span class="text-danger">{{userName.length == 0 ? 'Empty' : userName}}</span></b></p>
+
+    <button type="button" class="btn btn-success" (click)="resetUname()" [disabled]="userName.length == 0">
+        Reset User Name
+    </button>
+</div>

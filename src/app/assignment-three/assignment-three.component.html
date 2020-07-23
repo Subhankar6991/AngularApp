@@ -1,0 +1,19 @@
+<div class="container mt-3">
+    <!-- showDetails() -->
+    <button type="button" class="btn btn-success" (click)="displayDetails($event)"> {{buttonContent}} </button>
+
+    <div *ngIf="showDetails" class="container text-danger font-weight-bolder">
+        <p>
+            Secret Password = true
+        </p>
+    </div>
+
+    <div class="container">
+        <div class="row" *ngFor="let log of buttonClickLog" [ngStyle]="{backgroundColor: log.logID >= 5 ? 'rgb(82, 28, 168)' : 'transparent'}" [ngClass]="{'text-white': log.logID >=5 }">
+            <p class="font-weight-bold">Log ID : {{log.logID}}</p>
+            &nbsp;&nbsp;
+            <p class="font-weight-bold">Time Stamp: {{log.date}}</p>
+        </div>
+    </div>
+
+</div>

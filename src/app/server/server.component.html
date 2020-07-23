@@ -1,0 +1,12 @@
+<div class="container mt-3">
+    <button id="myBtn" type="button" class="btn btn-primary" (click)="clickMe($event)" [disabled]="disabled">
+      Press Me Hard
+    </button>
+</div>
+<div id="myAlert" class="alert alert-danger alert-dismissible fade show mt-3" role="alert" style="display: none;">
+    <div type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        <span class="sr-only">Close</span>
+    </div>
+    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+</div>
