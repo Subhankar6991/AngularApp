@@ -32,7 +32,8 @@ import { ToastrModule } from 'ngx-toastr';
     ToastrModule.forRoot({
       closeButton: true,
       timeOut: 3000,
-      progressBar: true
+      progressBar: true,
+      preventDuplicates: true
     }), // ToastrModule added
     CommonModule
   ],
