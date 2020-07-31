@@ -1,0 +1,22 @@
+<app-game-control (gameController)="onGameStarted($event)"></app-game-control>
+
+<div class="container border-black">
+    <div class="row">
+        <div class="col-sm">
+            <h2>Odd Ticks</h2>
+        </div>
+        <div class="col-sm">
+            <h2>Even Ticks</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm">
+            <app-odd *ngIf="gameControlTicks % 2 == 1" [gameControlTicks]="gameControlTicks">
+            </app-odd>
+        </div>
+        <div class="col-sm">
+            <app-even *ngIf="gameControlTicks % 2 == 0" [gameControlTicks]="gameControlTicks">
+            </app-even>
+        </div>
+    </div>
+</div>
