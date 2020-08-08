@@ -19,7 +19,10 @@ export class GameControlComponent implements OnInit {
 
   onStart() {
     if (!this.gameStartedBool) {
+      // Success ToastrService Called
       this.toastr.success('Have Fun...Enjoy Your Game!', 'Game Started');
+
+      // event emitted by each second using the setInterval method
       this.trigger = setInterval(() => {
         this.ticks += 1;
         console.log(this.ticks);
@@ -31,6 +34,7 @@ export class GameControlComponent implements OnInit {
     }
   }
 
+  // onStop the interval is cleared and a toaster service is called
   onStop() {
     this.toastr.error('Opps!! You Have Stopped Your Game', 'Game Stopped')
     clearInterval(this.trigger);

@@ -1,0 +1,15 @@
+<div class="form-group">
+    <label for="serverName">Account Name</label>
+    <input type="text" class="form-control" name="serverName" id="serverName" aria-describedby="helpId" placeholder="Enter Account Name" [(ngModel)]="accName">
+    <small id="helpId" class="form-text text-muted">Help text</small>
+</div>
+
+<div class="form-group">
+    <label for="accountType">Account Type</label>
+    <select class="form-control" name="accountType" id="accountType" [(ngModel)]="accType">
+    <option *ngFor="let accountType of accountTypes">{{accountType}}</option>
+  </select>
+</div>
+
+<input name="btnCreate" id="btnCreate" class="btn btn-primary" type="button" value="Create Account" (click)="createAccount()">
+<hr>

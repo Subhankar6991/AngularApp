@@ -11,11 +11,23 @@ import { EvenComponent } from './assignment-four/even/even.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { HilightDirective } from './Directive-Assets/hilight.directive';
+import { UnlessDirective } from './Directive-Assets/unless.directive';
 
+import {MatSelectModule} from '@angular/material/select';
+import { MatFormField } from '@angular/material/form-field';
+import { MatSliderModule } from '@angular/material/slider';
 
+import {MatInputModule} from '@angular/material/input';
+import {MatTableModule} from '@angular/material/table';
+import { ServiceTutorialComponent } from './service-tutorial/service-tutorial.component';
+import { AccountComponent } from './service-tutorial/account/account.component';
+import { NewAccountComponent } from './service-tutorial/new-account/new-account.component';
+// import {FormsModule} from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
+// Rjw$S1uWuAE7c7PCZwVJ 
     // AssignmentTwoComponent,
     // AssignmentThreeComponent,
     // ServerComponent,
@@ -24,18 +36,31 @@ import { ToastrModule } from 'ngx-toastr';
     GameControlComponent,
     OddComponent,
     EvenComponent,
+    HilightDirective,
+    UnlessDirective,
+    ServiceTutorialComponent,
+    AccountComponent,
+    NewAccountComponent
+
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    BrowserAnimationsModule, // required animations module
+    MatSelectModule,
+    BrowserAnimationsModule,
     ToastrModule.forRoot({
       closeButton: true,
       timeOut: 3000,
       progressBar: true,
       preventDuplicates: true
     }), // ToastrModule added
-    CommonModule
+    CommonModule,
+
+    // MatSliderModule
+  ],
+  exports: [
+    MatSelectModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

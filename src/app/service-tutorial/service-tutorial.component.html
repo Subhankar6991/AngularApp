@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <app-new-account [accTypes]="accountTypes" (accountController)="onCreateAccount($event)"></app-new-account>
+            <input name="btnLog" id="btnLog" class="btn btn-warning" type="button" value="See Log" (click)="displayLog();">
+        </div>
+
+        <div class="col-md-6">
+            <ul class="list-group">
+                <app-account *ngFor="let account of accounts,let i=index" [account]="account" [accTypes]="accountTypes" [accId]="i"> </app-account>
+            </ul>
+        </div>
+    </div>
+</div>
